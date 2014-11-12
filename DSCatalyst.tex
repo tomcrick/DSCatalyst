@@ -1,0 +1,188 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm,asymmetric]{geometry}
+\usepackage{url}
+\usepackage{paralist}
+\usepackage{authblk}
+\usepackage[multiple]{footmisc}
+\usepackage[pdftex,colorlinks=true,hyperfootnotes=false]{hyperref}
+
+\title{\vspace{-4em}Digital Science Catalyst Grant 2014}
+
+\author[1]{Tom Crick}
+\author[2]{Benjamin A. Hall}
+\author[3]{Samin Ishtiaq}
+\affil[1]{Department of Computing \& Information Systems, Cardiff Metropolitan University}
+\affil[2]{University of Cambridge}
+\affil[3]{Microsoft Research Cambridge}
+\affil[1]{\protect\url{tcrick@cardiffmet.ac.uk}}
+% \affil[2]{\protect\url{bh418@mrc-cu.cam.ac.uk}}
+% \affil[3]{\protect\url{samin.ishtiaq@microsoft.com}}
+
+
+\renewcommand\Authands{ and }
+
+\date{ }
+
+\begin{document}
+\maketitle
+
+% taken from here: http://www.digital-science.com/what-we-do/start-up-investment/catalyst
+
+% To apply, send us a proposal of a max of 1,500 words (with diagrams)
+% including the following: 
+
+% a description of the product or innovation
+% an explanation of how it would benefit scientific research
+% background information, including competitor information
+% a timetable for its development
+% a budget breakdown and how you would spend the funds
+
+\subsection*{Overview}
+The reproduction and replication of reported scientific results is a
+hot topic within the academic community. The retraction of numerous
+studies from a wide range of disciplines, from climate science to
+bioscience, has drawn the focus of many commentators, but there exists
+a wider socio-cultural problem that pervades the scientific community.
+Sharing code, data and models often requires extra effort; this is
+currently seen as a significant overhead that may not be worth the
+time investment.
+
+Automated systems, which allow easy reproduction of results, offer the
+potential to incentivise a culture change and drive the adoption of
+new techniques to improve the efficiency of scientific exploration. In
+this paper, we discuss the value of improved access and sharing of the
+two key types of results arising from work done in the computational
+sciences: models and algorithms. We propose the development of an
+integrated cloud-based system underpinning computational science,
+linking together software and data repositories, toolchains, workflows
+and outputs, providing a seamless automated infrastructure for the
+verification and validation of scientific models and in particular,
+performance benchmarks.
+
+Two key types of results arise from work done in the computational
+sciences: {\emph{models}} and {\emph{algorithms}}. Models represent an
+abstraction of reality, and their behaviour is expected to be reliably
+reproduced even if different algorithms are used. This validation of a
+model's behaviour can be impacted by a number of factors relating to
+the specific techniques used, but similar approaches are expected to
+give broadly the same results.  In contrast, when new algorithms are
+proposed to replace or supplement existing algorithms, they are
+expected to verifiably replicate the results of other algorithms.
+
+However, neither class of result exists in isolation: a new algorithm
+is dependent on a set of models (or benchmarks) to demonstrate its new
+capabilities. Equally, model development can both necessitate the
+development of new algorithms and highlight the differences between
+alternative approaches. Whilst algorithms and their implementations
+have been highlighted as a potential barrier to
+reproducibility~\cite{crick-et-al_wssspe2}, in this paper we discuss
+the value of improved access and sharing of models in reducing
+mistakes and in generating new scientific insights. We describe
+efforts to reproduce computational models and algorithms, specifically
+the multitude of issues relating to benchmarking of models and
+algorithms.  We conclude with thoughts on where efforts should be
+focused in both the short- and long-term to move to a world in which
+computational reproducibility helps researchers achieve their goals,
+rather than being perceived as an overhead.
+
+\subsection*{Contribution to the Scientific Community}
+The whole premise of this paper is that {\emph{algorithms}}
+(implementations) and {\emph{models}} (benchmarks) are inextricably
+linked. Algorithms are designed for certain types of models; models,
+though created to mimic some physical reality, also serve to stress
+the current known algorithms. An integrated autonomous cloud-based
+service can make this link explicit.
+
+In the software development world, no one would (should) commit to a
+project without first running the smoke tests. You could be clever and
+run the tests via the version control system's pre-commit hook. That
+way you would never forget to run the tests. All of this can be done,
+at scale, on the cloud now. Services such as
+Jenkins\footnote{\url{http://jenkins-ci.org/}}, Visual Studio
+Online\footnote{\url{http://www.visualstudio.com/en-us/products/what-is-visual-studio-online-vs.aspx}},
+etc, schedule the tests to run as soon as you commit. We envisage
+moving to a world in which benchmarks become available online, in the
+same vein as open access of publications and research data. It seems a
+small step to hook these continuous integration (CI) systems up to the
+algorithm implementations that are written to run on these benchmarks.
+
+Suppose you have come up with a better algorithm to deal with some of
+these benchmarks. You write up the paper on the algorithm but, more
+importantly, you also register the implementation of your algorithm at
+this open service, as a possible algorithm to run on this benchmark
+set. The benchmarks live in distributed git (or similar)
+repositories. Some of the servers that house these repositories are CI
+servers. Now, when you push a commit to your algorithm, or someone
+else pushes a commit to theirs, or when someone else adds a new
+benchmark, the service's CI system is triggered. It is also activated
+with the addition of a new library, firmware upgrade, API change,
+etc. All registered algorithms are run on all registered models, and
+the results are published. The CI servers act as an authoritative
+source, analogous to the Linux Kernel
+Archives\footnote{\url{https://www.kernel.org/}}, of results for these
+algorithms running on these benchmarks.
+
+% other examples?
+There are already several web services that nearly do all of this
+things (for example, a repository for disseminating the computational
+models associated with publications in the social and life
+sciences~\cite{rollins-et-al:2014}), so a service that can integrate
+most if not all of these features is possible. Such a service would
+then allow algorithms and models to evolve together, and be
+reproducible from the outset.
+
+A system as described here has several up-front benefits: it links
+papers more closely to their outputs, making external validation
+easier and allows interested users to explore unaddressed sets of
+models. Critically, it helps researchers to be more productive, rather
+than being an overhead on their day-to-day work. In the same way that
+tools such as GitHub make collaborating easier while simultaneously
+allowing effortless sharing, we hope that we can design and build a
+system that is similarly usable for sharing and testing benchmarks
+online.
+
+In summary, this proposed new infrastructure could have a profound
+impact on the way that computational science is performed,
+repositioning the role of models, algorithms and benchmarks and
+accelerating the research cycle, perhaps truly enabling a ``fourth
+paradigm'' of data intensive scientific
+discovery~\cite{hey:2009}. Furthermore, it would effect the vital
+cultural change by reducing overheads and improving the efficiency of
+researchers.
+
+Some of this work has been discussed in~\cite{crick-et-al_recomp2014}
+
+\subsection*{Budget}
+
+Tom's direct costs are \pounds 49.58 per hour, so say 7 hours a week
+buyout = c. \pounds 350
+
+One week's hotel: 7 nights at \pounds 130 = \pounds 910
+
+One week's subsistence: 7 days at \pounds 25 = \pounds 175
+
+Round trip travel: \pounds 180
+
+One trip = c.£1600
+
+{\textbf{So, five(?) trips = \pounds 8000}}
+
+{\textbf{Programmer = \pounds 5000}}
+
+What other costs?
+
+\subsection*{Team Profile}
+
+% should we each have a brief personal biog here, who we are and what
+% we do?
+
+Tom is ace...
+
+Ben is ace...
+
+Samin is ace...
+
+\bibliographystyle{plain}
+\bibliography{DSCatalyst}
+
+\end{document}
