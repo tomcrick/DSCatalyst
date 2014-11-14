@@ -37,21 +37,41 @@
 % a timetable for its development
 % a budget breakdown and how you would spend the funds
 
+
+
 \subsection*{Overview}
 
-The reproduction and replication of reported scientific results is a
-hot topic within the academic community. The retraction of numerous
-studies from a wide range of disciplines, from climate science to
-bioscience, has drawn the focus of many commentators, but there exists
-a wider socio-cultural problem that pervades the scientific community.
-Sharing code, data and models often requires extra effort; this is
-currently seen as a significant overhead that may not be worth the
-time investment.
+Reproducibility (replication, repeatability) is a basic tenet of good
+science,
 %
-We believe that automated systems, which allow easy reproduction of results, offer the
-potential to incentivise a culture change and drive the adoption of
-new techniques to improve the efficiency of scientific exploration. 
-Our proposal here builds on this viewpoint. 
+and the retraction of numerous results, from disciplines ranging from
+climate science to bioscience, has drawn the focus of many
+commentators.
+%
+Algorithms and Models are the basic outcomes of digital science, 
+%
+but the pure fact is that it is not easy to share (use, repeat,
+compare, contribute) these artifacts. The difficulty of sharing is
+partly a cultural problem.
+%
+We believe that an automated notify+reproduce system, which allows
+easy reproduction of the results of algorithms running of models, will
+improve the efficiency of scientific exploration.  Our proposal here
+builds on this belief.
+
+% The reproduction and replication of reported scientific results is a
+% hot topic within the academic community. The retraction of numerous
+% studies from a wide range of disciplines, from climate science to
+% bioscience, has drawn the focus of many commentators, but there exists
+% a wider socio-cultural problem that pervades the scientific community.
+% Sharing code, data and models often requires extra effort; this is
+% currently seen as a significant overhead that may not be worth the
+% time investment.
+% %
+% We believe that automated systems, which allow easy reproduction of results, offer the
+% potential to incentivise a culture change and drive the adoption of
+% new techniques to improve the efficiency of scientific exploration. 
+% Our propsal here builds on this belief. 
 
 
 %In
@@ -59,47 +79,37 @@ Our proposal here builds on this viewpoint.
 %two key types of results arising from work done in the computational
 %sciences: models and algorithms. 
 
-\subsection*{Background}
-Two key types of results arise from work done in the computational
-sciences: {\emph{models}}~\cite{crick-et-al_recomp14} and {\emph{algorithms}}~\cite{crick-et-al_wssspe2}. Models represent an
-abstraction of reality, and their behaviour is expected to be reliably
-reproduced even if different algorithms are used. This validation of a
-model's behaviour can be impacted by a number of factors relating to
-the specific techniques used, but similar approaches are expected to
-give broadly the same results.  In contrast, when new algorithms are
-proposed to replace or supplement existing algorithms, they are
-expected to verifiably replicate the results of other algorithms.
-Neither class of result can be assessed in isolation- the development 
-of algorithms requires models which have a known behaviour, whilst
-the assessment of model behaviours may require a knowledge of the 
-specific algorithms used to explore that behaviour. Furthermore, models
-may necessitate algorithm development, and new algorithms may make 
-previously intractable models analysable.
+% \subsection*{Background}
+% Two key types of results arise from work done in the computational
+% sciences: {\emph{models}}~\cite{crick-et-al_recomp14} and {\emph{algorithms}}~\cite{crick-et-al_wssspe2}. Models represent an
+% abstraction of reality, and their behaviour is expected to be reliably
+% reproduced even if different algorithms are used. This validation of a
+% model's behaviour can be impacted by a number of factors relating to
+% the specific techniques used, but similar approaches are expected to
+% give broadly the same results.  In contrast, when new algorithms are
+% proposed to replace or supplement existing algorithms, they are
+% expected to verifiably replicate the results of other algorithms.
+% Neither class of result can be assessed in isolation- the development 
+% of algorithms requires models which have a known behaviour, whilst
+% the assessment of model behaviours may require a knowledge of the 
+% specific algorithms used to explore that behaviour. Furthermore, models
+% may necessitate algorithm development, and new algorithms may make 
+% previously intractable models analysable.
 
-Scientific progress depends on the replication of observable results, both 
-to confirm previous findings and to extend the findings into new areas. 
-However, this can be difficult at present- even in a best case scenario,
-where the source code and models are available, external dependencies
-may limit reproducibility. More commonly, sharing code, data and models 
-requires a significant effort that few are willing to invest in.
-%Doing science, so want easy replication. But this is very difficult in the 
-%current situation. Even sharing of code, data and models requires significant
-%effort that few are willing to invest in. 
-
-\subsection*{Proposal}
-To address these issues, we propose the development of a prototype
-software platform which will automate the complete testing procedure,
-from code to models. By developing a cloud-based, centralised service,
-which performs automated code compilation, testing and benchmarking, 
-we will link together published implementations of algorithms and 
-input models. This will allow the future extension of the prototype
-to link together software and data repositories, toolchains, workflows
-and outputs, providing a seamless automated infrastructure for the
-verification and validation of scientific models and in particular,
-performance benchmarks. The program of work will lead the cultural 
-shift in both the short- and long-term to move to a world in which
-computational reproducibility helps researchers achieve their goals,
-rather than being perceived as an overhead.
+\subsection*{Description of product}
+We plan to develop a prototype software platform which will automate
+the complete testing procedure, from code to models. By developing a
+cloud-based, centralised service, which performs automated code
+compilation, testing and benchmarking, we will link together published
+implementations of algorithms and input models. This will allow the
+future extension of the prototype to link together software and data
+repositories, toolchains, workflows and outputs, providing a seamless
+automated infrastructure for the verification and validation of
+scientific models and in particular, performance benchmarks. The
+program of work will lead the cultural shift in both the short- and
+long-term to move to a world in which computational reproducibility
+helps researchers achieve their goals, rather than being perceived as
+an overhead.
 
 A system as described here has several up-front benefits: it links
 papers more closely to their outputs, making external validation
