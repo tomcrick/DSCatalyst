@@ -51,7 +51,7 @@ time investment.
 We believe that automated systems, which allow easy reproduction of results, offer the
 potential to incentivise a culture change and drive the adoption of
 new techniques to improve the efficiency of scientific exploration. 
-Our propsal here builds on this belief. 
+Our proposal here builds on this viewpoint. 
 
 
 %In
@@ -76,9 +76,15 @@ specific algorithms used to explore that behaviour. Furthermore, models
 may necessitate algorithm development, and new algorithms may make 
 previously intractable models analysable.
 
-Doing science, so want easy replication. But this is very difficult in the 
-current situation. Even sharing of code, data and models requires significant
-effort that few are willing to invest in. 
+Scientific progress depends on the replication of observable results, both 
+to confirm previous findings and to extend the findings into new areas. 
+However, this can be difficult at present- even in a best case scenario,
+where the source code and models are available, external dependencies
+may limit reproducibility. More commonly, sharing code, data and models 
+requires a significant effort that few are willing to invest in.
+%Doing science, so want easy replication. But this is very difficult in the 
+%current situation. Even sharing of code, data and models requires significant
+%effort that few are willing to invest in. 
 
 \subsection*{Proposal}
 To address these issues, we propose the development of a prototype
@@ -123,35 +129,8 @@ discovery~\cite{hey:2009}. Furthermore, it would effect the vital
 cultural change by reducing overheads and improving the efficiency of
 researchers.
 
-\subsection*{Program of work}
+\subsection{Vision, Objective and Goals}
 
-The objective of this proposal is to develop a system which, through
-integration with publically available source code repositories automates
-the build, testing and benchmarking of algorithms and benchmarks. The 
-system will allow tesing models against competing algorithms, and the
-addition of new models to the test suite (either manually or from existing
-online repositories). The goals are to:
-
-
-Build a webserver, running a daemon which automatically pulls, and compiles
-code from git repositories
-Run automated tests defined by the developers on the code
-Perform analysis of benchmark sets supplied by both the developer and external
-users
-
-This will be achieved over a period of 6 months, including regular meetings
-for the design of the tool, and will involve the employment of a dedicated 
-programmer to implement the system.
-
-%The whole premise of this paper is that {\emph{algorithms}}
-%(implementations) and {\emph{models}} (benchmarks) are inextricably
-%linked. Algorithms are designed for certain types of models; models,
-%though created to mimic some physical reality, also serve to stress
-%the current known algorithms. An integrated autonomous cloud-based
-%service can make this link explicit.
-
-
-%Note- move/integrate with introduction?
 In the software development world, no one would (should) commit to a
 project without first running the smoke tests. You could be clever and
 run the tests via the version control system's pre-commit hook. That
@@ -180,6 +159,35 @@ the results are published. The CI servers act as an authoritative
 source, analogous to the Linux Kernel
 Archives\footnote{\url{https://www.kernel.org/}}, of results for these
 algorithms running on these benchmarks.
+
+The objective of this proposal is to develop a system which, through
+integration with publically available source code repositories automates
+the build, testing and benchmarking of algorithms and benchmarks. The 
+system will allow tesing models against competing algorithms, and the
+addition of new models to the test suite (either manually or from existing
+online repositories). The goals are to:
+
+\begin{itemize}
+	\item Build a webserver, running a daemon which automatically pulls, and compiles
+code from git repositories
+\item Run automated tests defined by the developers on the code
+\item Perform analysis of benchmark sets supplied by both the developer and external
+users
+\end{itemize}
+
+This will be achieved over a period of 6 months, including regular meetings
+for the design of the tool, and will involve the employment of a dedicated 
+programmer to implement the system.
+
+%The whole premise of this paper is that {\emph{algorithms}}
+%(implementations) and {\emph{models}} (benchmarks) are inextricably
+%linked. Algorithms are designed for certain types of models; models,
+%though created to mimic some physical reality, also serve to stress
+%the current known algorithms. An integrated autonomous cloud-based
+%service can make this link explicit.
+
+
+%Note- move/integrate with introduction?
 
 
 
@@ -212,7 +220,7 @@ Trips to see stakeholders (who are they, where are they? People like Mozilla Sci
 
 Tom is ace...
 
-Benjamin A Hall is a Royal Society University Research Fellow, working at the MRC Cancer Unit, University of Cambridge. He previously worked at Microsoft Research (Cambridge), UCL and the University of Oxford. As part of his role at the University of Oxford, he was one of two Apple Laureates, awarded by Apple and the Oxford Supercomputing Centre.
+Benjamin A Hall is a Royal Society University Research Fellow, developing hybrid and formal models of carcinogenesis and biological signalling at the MRC Cancer Unit, University of Cambridge. He previously worked at Microsoft Research (Cambridge), UCL and the University of Oxford. As part of his role at the University of Oxford, he was one of two Apple Laureates, awarded by Apple and the Oxford Supercomputing Centre for the project "A biomolecular simulation pipeline". Benjamin has an MBiochem and DPhil from the University of Oxford.
 
 Samin Ishtiaq is Principal Engineer in the Programming Principles and Tools group at Microsoft Research Cambridge. He currently works on the SLAyer (Separation Logic-based memory safety for C programs), TERMINATOR (program termination) and BMA (analysis of gene regulatory networks) projects. Samin joined MSR in April 2008. Before that, during 2000-2008, he worked in CPU modeling and verification at ARM, helping to tape-out the Cortex A8, Cortex M3 and SC300 processors, and the AMBA bus protocol checker. Samin has an MEng from Imperial and a PhD in dependent type theory from Queen Mary. 
 
