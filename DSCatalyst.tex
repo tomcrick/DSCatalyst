@@ -3,7 +3,7 @@
 \usepackage{url}
 \usepackage{paralist}
 \usepackage{authblk}
-\usepackage[multiple]{footmisc}
+%\usepackage[multiple]{footmisc}
 \usepackage[pdftex,colorlinks=true,hyperfootnotes=false]{hyperref}
 
 \title{\vspace{-4em}Digital Science Catalyst Grant 2014}
@@ -20,6 +20,7 @@
 
 
 \renewcommand\Authands{ and }
+\def\UrlBreaks{\do\/\do-}
 
 \date{ }
 
@@ -46,18 +47,24 @@ science. The retraction of numerous results, for disciplines ranging
 from climate science to bioscience, has drawn the focus of many
 commentators.
 
-These studies are examples of {\emph{digital science}}, a new way of 
+These studies are examples of {\emph{digital science}}, a new way of
 doing science with fundamentally very different research outcomes:
-that of {\emph{Algorithms}} and {\emph{Models}}.
-But, alongside this new way of working, is the simple downside that it is 
-still not easy to share (use, repeat, compare, contribute) these
-artefacts. The difficulty of sharing is partly grounded as a cultural
-problem, alongside a wider technical/infrastructural problem.
+that of {\emph{algorithms}} and {\emph{models}}. However, despite this
+advantage, and alongside ongoing -- and significant -- changes to the
+traditional models of academic dissemination and
+publication~\cite{deroure:2010,stodden-et-al:2013,fursin+dubach:2014}
+and recognition of the important of scientific
+software~\cite{goble:2014}, there remain cultural and technical
+barriers to both the sharing and reimplementation of
+algorithms. Alongside this new way of working, is the simple downside
+that it is still not easy to share (use, repeat, compare, contribute)
+these artefacts. The difficulty of sharing is partly grounded as a
+cultural problem, alongside a wider technical/infrastructural problem.
 
 We believe that an automated notify+reproduce system, which allows
 easy reproduction of the results of algorithms running of models, will
-improve the efficiency of scientific exploration.  Our Digital Science
-Catalyst Grant proposal here builds on this belief.
+significantly improve the efficiency of scientific exploration.  This
+Digital Science Catalyst Grant proposal here builds on this belief.
 
 % The reproduction and replication of reported scientific results is a
 % hot topic within the academic community. The retraction of numerous
@@ -96,20 +103,20 @@ Catalyst Grant proposal here builds on this belief.
 % may necessitate algorithm development, and new algorithms may make 
 % previously intractable models analysable.
 
-\subsection*{Description of product}
-We plan to develop a prototype software platform which will automate
-the complete testing procedure, from code to models. By developing a
-cloud-based, centralised service, which performs automated code
-compilation, testing and benchmarking, we will link together published
-implementations of algorithms and input models. This will allow the
-future extension of the prototype to link together software and data
-repositories, toolchains, workflows and outputs, providing a seamless
-automated infrastructure for the verification and validation of
-scientific models and in particular, performance benchmarks. The
-program of work will lead the cultural shift in both the short- and
-long-term to move to a world in which computational reproducibility
-helps researchers achieve their goals, rather than being perceived as
-an overhead.
+\subsection*{Description}
+{\textbf{We propose to develop a prototype open software platform
+which will automate the complete testing procedure, from code to
+models.}} By developing a cloud-based, centralised service, which
+performs automated code compilation, testing and benchmarking, we will
+link together published implementations of algorithms and input
+models. This will allow the future extension of the prototype to link
+together software and data repositories, toolchains, workflows and
+outputs, providing a seamless automated infrastructure for the
+verification and validation of scientific models and in particular,
+performance benchmarks. The program of work will lead the cultural
+shift in both the short- and long-term to move to a world in which
+computational reproducibility helps researchers achieve their goals,
+rather than being perceived as an overhead.
 
 A system as described here has several up-front benefits: it links
 papers more closely to their outputs, making external validation
@@ -122,20 +129,20 @@ system that is similarly usable for sharing and testing benchmarks
 online.
 
 % other examples?
-There are already several web services that nearly do all of this
+There are already several web services that can do aspects all of this
 things (for example, a repository for disseminating the computational
 models associated with publications in the social and life
 sciences~\cite{rollins-et-al:2014}), so a service that can integrate
-most if not all of these features is possible. Such a service would
+most if not all of these features is feasible. Such a service would
 then allow algorithms and models to evolve together, and be
 reproducible from the outset.
 
 In summary, this proposed new infrastructure, previously highlighted
 and discussed by the
 authors~\cite{crick-et-al_wssspe2,crick-et-al_recomp2014}, would have
-a profound impact on the way that computational science is performed,
-repositioning the role of models, algorithms and benchmarks and
-accelerating the research cycle, perhaps truly enabling a ``fourth
+a profound impact on the way that open computational science is
+performed, repositioning the role of models, algorithms and benchmarks
+and accelerating the research cycle, perhaps truly enabling a ``fourth
 paradigm'' of data intensive scientific
 discovery~\cite{hey:2009}. Furthermore, it would effect the vital
 cultural change by reducing overheads and improving the efficiency of
@@ -181,15 +188,15 @@ online repositories). The goals are to:
 
 \begin{itemize}
 	\item Build a webserver, running a daemon which automatically pulls, and compiles
-code from git repositories
-\item Run automated tests defined by the developers on the code
+code from git repositories;
+\item Run automated tests defined by the developers on the code;
 \item Perform analysis of benchmark sets supplied by both the developer and external
-users
+users.
 \end{itemize}
 
-This will be achieved over a period of six months, including regular meetings
-for the design of the tool, and will involve the employment of a dedicated 
-programmer to implement the system.
+This will be achieved over a period of six months, including regular
+meetings for the design and requirements of the tool, and will involve
+the employment of a dedicated programmer to implement the system.
 
 %The whole premise of this paper is that {\emph{algorithms}}
 %(implementations) and {\emph{models}} (benchmarks) are inextricably
@@ -208,17 +215,17 @@ programmer to implement the system.
 The major components of the budget are based around buying out Crick's
 time and enabling him to visit Cambridge to work with the rest of the
 project team, along with the employment of a dedicated programmer to
-implement the system.
+implement the system:
 
 \begin{itemize}
 \item We have costed six separate week-long visits to Cambridge for
-  Crick: his direct buy-out costs for a week are \pounds 350
-totalling (covering seven hours of teaching);  One week's hotel: seven
-nights in Cambridge at c.\pounds 130 = \pounds 910; one week's
-subsistence: seven days at \pounds 25 = \pounds 200; round trip
-travel: \pounds 180; (one individual trip costing \pounds 1600): \hfill {\textbf{\pounds 9,600}}
+Crick: direct buy-out costs for a week are \pounds 350 (covering seven
+hours of teaching); one week's accommodation (seven nights in
+Cambridge at c.\pounds 130) \pounds 910; one week's subsistence (seven days at \pounds 25) \pounds 200; round trip travel: \pounds
+180; (therefore, one individual trip costs \pounds 1600): \hfill {\textbf{\pounds 9,600}}
 
-\item Programmer to implement the system \hfill {\textbf{\pounds 5,000}}
+\item Programmer to implement the system, in conjuction with the
+  project team: \hfill {\textbf{\pounds 5,000}}
 
 \item Travel and subsistence for meetings with key stakeholders (for
   example, GitHub, Microsoft Azure team, Mozilla Science Lab, etc):
@@ -229,7 +236,7 @@ travel: \pounds 180; (one individual trip costing \pounds 1600): \hfill {\textbf
 
 \subsection*{Team Profile}
 
-Tom\footnote{\url{http://drtomcrick.com}} is a Senior Lecturer in
+Dr Tom Crick\footnote{\url{http://drtomcrick.com}} is a Senior Lecturer in
 Computing Science at Cardiff Metropolitan University, having completed
 his PhD and post-doctoral research at the University of Bath. His
 research interests cut across computational science: knowledge
@@ -240,7 +247,7 @@ Science Fellow, a 2014 Fellow of the Software Sustainability Institute
 Excellence on High Performance and Embedded Architecture and
 Compilation.
 
-Benjamin A. Hall\footnote{\url{http://www.mrc-cu.cam.ac.uk/hall.html}}
+Dr Benjamin A. Hall\footnote{\url{http://www.mrc-cu.cam.ac.uk/hall.html}}
 is a Royal Society University Research Fellow, developing hybrid and
 formal models of carcinogenesis and biological signalling at the MRC
 Cancer Unit, University of Cambridge. He previously worked at
@@ -250,7 +257,7 @@ Laureates, awarded by Apple and the Oxford Supercomputing Centre for
 the project {\emph{A biomolecular simulation pipeline}}. Benjamin has an
 MBiochem and DPhil from the University of Oxford.
 
-Samin
+Dr Samin
 Ishtiaq\footnote{\url{http://research.microsoft.com/en-us/people/sishtiaq/}}
 is Principal Engineer in the Programming Principles and Tools group at
 Microsoft Research Cambridge. He currently works on the SLAyer
