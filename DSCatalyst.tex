@@ -105,8 +105,7 @@ Digital Science Catalyst Grant proposal here builds on this belief.
 
 \subsection*{Description}
 {\textbf{We propose to develop a prototype open software platform
-which will automate the complete testing procedure, from code to
-models.}} By developing a cloud-based, centralised service, which
+which will automate reproducibility for algorithms and models.}} By developing a cloud-based, centralised service, which
 performs automated code compilation, testing and benchmarking, we will
 link together published implementations of algorithms and input
 models. This will allow the future extension of the prototype to link
@@ -122,11 +121,11 @@ A system as described here has several up-front benefits: it links
 papers more closely to their outputs, making external validation
 easier and allows interested users to explore unaddressed sets of
 models. Critically, it helps researchers to be more productive, rather
-than being an overhead on their day-to-day work. In the same way that
-tools such as GitHub make collaborating easier while simultaneously
-allowing effortless sharing, we hope that we can design and build a
-system that is similarly usable for sharing and testing benchmarks
-online.
+than reproducibility being an overhead on their day-to-day work. In
+the same way that tools such as GitHub make collaborating easier while
+simultaneously allowing effortless sharing, we hope that we can design
+and build a system that is similarly usable for sharing and testing
+benchmarks online.
 
 % other examples?
 There are already several web services that can do aspects all of this
@@ -150,11 +149,11 @@ researchers.
 
 \subsection*{Vision, Objective and Goals}
 
-In the software development world, no one would (should) commit to a
-project without first running the smoke tests. You could be clever and
-run the tests via the version control system's pre-commit hook. That
-way you would never forget to run the tests. All of this can be done,
-at scale, on the cloud now. Services such as
+In the software development world, no one would (or should!) commit to
+a project without first running the smoke tests. You could be clever
+and run the tests via the version control system's pre-commit
+hook. That way you would never forget to run the tests. All of this
+can be done, at scale, on the cloud now. Services such as
 Jenkins\footnote{\url{http://jenkins-ci.org/}}, Visual Studio
 Online\footnote{\url{http://www.visualstudio.com/en-us/products/what-is-visual-studio-online-vs.aspx}},
 etc, schedule the tests to run as soon as you commit. We envisage
@@ -167,7 +166,7 @@ Suppose you have come up with a better algorithm to deal with some of
 these benchmarks. You write up the paper on the algorithm but, more
 importantly, you also register the implementation of your algorithm at
 this open service, as a possible algorithm to run on this benchmark
-set. The benchmarks live in distributed git (or similar)
+set. The benchmarks live in distributed git 
 repositories. Some of the servers that house these repositories are CI
 servers. Now, when you push a commit to your algorithm, or someone
 else pushes a commit to theirs, or when someone else adds a new
@@ -217,7 +216,7 @@ time and enabling him to visit Cambridge to work with the rest of the
 project team, along with the employment of a dedicated programmer to
 implement the system:
 
-\begin{itemize}
+\begin{enumerate}
 \item We have costed six separate week-long visits to Cambridge for
 Crick: direct buy-out costs for a week are \pounds 350 (covering seven
 hours of teaching); one week's accommodation (seven nights in
@@ -232,7 +231,7 @@ Cambridge at c.\pounds 130) \pounds 910; one week's subsistence (seven days at \
   \hfill {\textbf{\pounds 400}}
 
 \item {\textbf{GRANT TOTAL: \hfill \pounds 15,000}}
-\end{itemize}
+\end{enumerate}
 
 \subsection*{Team Profile}
 
