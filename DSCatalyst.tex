@@ -47,7 +47,10 @@ science. This tenet holds all the more for digital science, with its
 fundamentally more concrete outputs of algorithms and models. However,
 there remain cultural and technical barriers to the sharing (using,
 repeating, comparing, contributing, reimplementing) of these
-artefacts.
+artefacts, all the way from disseminating academic
+publications~\cite{deroure:2010,stodden-et-al:2013,fursin+dubach:2014},
+through to recognition of the importance of scientific
+software~\cite{goble:2014} and computation~\cite{gent:2013}.
 
 % Reproducibility (replication, repeatability) is a basic tenet of good
 % science. The retraction of numerous results, for disciplines ranging
@@ -71,8 +74,12 @@ artefacts.
 We believe that an automated notify+reproduce system, which allows
 easy reproduction of the results of algorithms running on models, will
 help significantly with lifting the cultural burden and, by doing so,
-will vastly improve the efficiency of scientific exploration.  This
-Digital Science Catalyst Grant proposal here builds on this belief.
+will vastly improve the efficiency of scientific exploration. Our
+Digital Science Catalyst Grant proposal builds on this belief. While
+there has been significant academic and policy discussion in this
+space over the past few years, now is the time for the creation of an
+extensible and adaptable open infrastructure to facilitate the
+automation of science reproducibility.
 
 % The reproduction and replication of reported scientific results is a
 % hot topic within the academic community. The retraction of numerous
@@ -113,9 +120,10 @@ Digital Science Catalyst Grant proposal here builds on this belief.
 
 \subsection*{Description}
 {\textbf{We propose to develop a prototype open software platform
-which will automate reproducibility for algorithms and models.}} By developing a cloud-based, centralised service, which
-performs automated code compilation, testing and benchmarking, we will
-link together published implementations of algorithms and input
+which will automate reproducibility for algorithms and models.}}  By
+developing a cloud-based, centralised service, which performs
+automated code compilation, testing and benchmarking, we will link
+together published implementations of algorithms and input
 models. This will allow the future extension of the prototype to link
 together software and data repositories, toolchains, workflows and
 outputs, providing a seamless automated infrastructure for the
@@ -136,7 +144,7 @@ and build a system that is similarly usable for sharing and testing
 benchmarks online.
 
 % other examples?
-There are already several web services that can do aspects all of this
+There are already several web services that can do aspects of this
 things (for example, a repository for disseminating the computational
 models associated with publications in the social and life
 sciences~\cite{rollins-et-al:2014}), so a service that can integrate
@@ -199,6 +207,11 @@ code from git repositories;
 \item Run automated tests defined by the developers on the code;
 \item Perform analysis of benchmark sets supplied by both the developer and external
 users.
+\item Work with key stakeholders in the open software/open data/open access/open
+  science space, as well as key e-infrastructural organisations
+  e.g. Digital Science, GitHub, Microsoft
+  Azure, Software Sustainability Institute, Mozilla Science Lab,
+  Nesta, etc.
 \end{itemize}
 
 This will be achieved over a period of six months, including regular
@@ -234,12 +247,11 @@ Cambridge at c.\pounds 130) \pounds 910; one week's subsistence (seven days at \
 \item Programmer to implement the system, in conjuction with the
   project team: \hfill {\textbf{\pounds 5,000}}
 
-\item Travel and subsistence for meetings with key stakeholders (for
-  example, GitHub, Microsoft Azure team, Mozilla Science Lab, etc):
+\item Travel and subsistence for meetings with key stakeholders:
   \hfill {\textbf{\pounds 400}}
-
-\item {\textbf{GRANT TOTAL: \hfill \pounds 15,000}}
 \end{enumerate}
+
+{\textbf{GRANT TOTAL: \hfill \pounds 15,000}}
 
 \subsection*{Team Profile}
 
@@ -276,7 +288,7 @@ the Cortex A8, Cortex M3 and SC300 processors, and the AMBA bus
 protocol checker. Samin has an MEng from Imperial and a PhD in
 dependent type theory from Queen Mary.
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{DSCatalyst}
 
 \end{document}
